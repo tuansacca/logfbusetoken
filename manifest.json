@@ -1,0 +1,40 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Login Facebook",
+  "version": "1.0",
+
+  // Recommended
+  "description": "Đăng nhập Facebook bằng Token",
+  "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png" 
+  },
+
+  // Pick one (or none)
+  "browser_action": {
+      "default_icon": {                    // optional
+        "16": "icon.png",           // optional
+        "24": "icon.png",           // optional
+        "32": "icon.png"            // optional
+      },
+      "default_title": "Login Fb",      // optional; shown in tooltip
+      "default_popup": "popup.html"        // optional
+  },  
+  "author": "tuansacca",
+  "background": {
+    // Recommended
+    "scripts":["js/mp.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "contextMenus",
+    "management",
+    "activeTab",
+    "storage",
+    "tabs",
+    "cookies",
+    "*://*.facebook.com/*"
+  ]
+}
